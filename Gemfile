@@ -51,6 +51,18 @@ gem "bootsnap", require: false
 # Database Postgresql
 gem 'pg', '~> 1.5', '>= 1.5.4'
 
+# Devise - Authentication solution
+gem 'devise', '~> 4.9', '>= 4.9.2'
+
+# Bootstrap and 
+gem 'bootstrap', '5.2.3'
+
+# Jquery
+gem 'jquery-rails'
+
+# Font-Awesome-Rails
+gem "font-awesome-rails"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
