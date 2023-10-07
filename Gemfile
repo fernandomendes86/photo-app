@@ -54,8 +54,9 @@ gem 'pg', '~> 1.5', '>= 1.5.4'
 # Devise - Authentication solution
 gem 'devise', '~> 4.9', '>= 4.9.2'
 
-# Bootstrap and 
+# Bootstrap
 gem 'bootstrap', '5.2.3'
+gem 'twitter-bootstrap-rails'
 
 # Jquery
 gem 'jquery-rails'
