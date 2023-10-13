@@ -28,6 +28,26 @@
             <li><%= link_to "Link2", "/path2"  %></li>
             <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li class="red">
+                <%= link_to edit_user_registration_path do %>
+                  <%= fa_stacked_icon 'user' %><%= current_user.try(:email) %> 
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <%= fa_stacked_icon 'sign-out' %> Logout
+                <% end %>
+              </li>
+            <% else %>
+              <li>
+                <%= link_to new_user_session_path do %>
+                  <%= fa_stacked_icon 'sign-in' %> Sign In
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>
@@ -38,19 +58,7 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        <div class="col-lg-3">
-          <div class="well sidebar-nav">
-            <h3>Sidebar</h3>
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
       </div><!--/row-->
-
       <footer>
         <p>&copy; Company 2023</p>
       </footer>
