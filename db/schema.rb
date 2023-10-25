@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_25_045605) do
   create_table "payments", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email"
     t.string "token"
-    t.integer "user_id"
+    t.uuid "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
