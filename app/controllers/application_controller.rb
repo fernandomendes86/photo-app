@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [ payment_attributes: [:card_number, :card_cvv, :card_expires_month, :card_expires_year] ])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ payment_attributes: [:card_number, :card_cvc, :card_expires_month, :card_expires_year] ])
   end
 end
